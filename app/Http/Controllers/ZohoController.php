@@ -29,7 +29,7 @@ class ZohoController extends Controller
         $record = $tasks->getRecordInstance();
         $record->setFieldValue('Subject', 'Sample Subject at ' . date('Y-m-d H:i:s'));
         $record->setFieldValue('$se_module', 'Deals'); //relation module
-        $record->setFieldValue('What_Id', $deal->getEntityId());
+        $record->setFieldValue('What_Id', $deal);
         $task = $record->create();
         dump($task->getData());
     }
